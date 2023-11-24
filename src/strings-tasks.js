@@ -298,7 +298,7 @@ function orderAlphabetically(str) {
  *   containsSubstring('12345', '34') => true
  */
 function containsSubstring(str, substring) {
-  return str.indexOf(substring) >= 0;
+  return str.includes(substring);
 }
 
 /**

@@ -247,18 +247,10 @@ function endsWith(str, substr) {
  *   formatTime(0, 0) => "00:00"
  */
 function formatTime(minutes, seconds) {
-  function isDoubleChar(str) {
-    return str.length === 2;
-  }
-  let formatMinutes = String(minutes);
-  let formatSeconds = String(seconds);
-  if (!isDoubleChar(formatMinutes)) {
-    formatMinutes = `0${formatMinutes}`;
-  }
-  if (!isDoubleChar(formatSeconds)) {
-    formatSeconds = `0${formatSeconds}`;
-  }
-  return `${formatMinutes}:${formatSeconds}`;
+  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(
+    2,
+    '0'
+  )}`;
 }
 
 /**
